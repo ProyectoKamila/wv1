@@ -1,0 +1,123 @@
+<?php get_header('');?>
+<?php portada('juego'); ?>
+<div class="content">
+	<div class="container fondo-mesa">
+		<div class="row">
+				<div class="col-lg-12 text-center juego-texto1">
+					<h1>JUEGOS DEL CASINO</h1>
+
+				</div>
+			
+		</div>
+	</div>
+	<!--CUADROS DE IMAGENES Y TEXTO -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-8 col-sm-8 ">
+				<?php while(have_posts()){ the_post();?>
+					<div class="cuadro1">
+				
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							
+							<img src="<?php bloginfo("template_url") ?>/images/recortes/juegos/slot-machine.jpg" class="img-responsive juegos-imagenes" alt="" >
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+								<h2>SLOT MACHINE</h2>
+							<div class="parrafo-machine">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra porta magna ut mattis. In ac lacinia mauris. Curabitur eget augue risus. Aliquam erat volutpat. In ultrices varius lorem, ut sagittis odio pretium eget. Integer venenatis, arcu sit amet porta fringilla, tellus nunc posuere velit, vel volutpat ante lacus ut lectus.
+								</p>
+								<a href="" class="btn btn-default boton-ver">
+									<span class="texto-jugar">JUGAR AHORA</span>
+									<span class="glyphicon glyphicon-play-circle ico-play"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="paleta">
+						<img src="<?php bloginfo("template_url") ?>/images/recortes/juegos/linea.png" class="img-responsive franja" alt="">
+					</div>
+				<?php } ?>	
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4  ">
+				<!--ASIDE 1 -->
+				<aside class="aside1">
+						<?php $pagename = query_posts(array('post_type'=>'page','pagename'=>'aside-juegos','posts_per_page'=>1));?>
+ 						<?php if(!empty($pagename)) {?>
+     					<?php while(have_posts()){ the_post();?>
+								<h2 class="titulo-aside"><?php the_title()?></h2>
+								<div class="parrafo-aside">
+									<p>
+										<?php echo max_charlength(get_the_content(),650);?>
+									</p>
+								</div>
+
+					
+				</aside>
+				<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+				<aside class="aside01">
+					 <img src="<?php echo $feat_image;?>" class="img-responsive imagen1-aside" alt="">
+				</aside>
+				<?php } ?>
+				<?php } ?>
+				<!--/ASIDE 1 -->
+				<aside class="aside2">
+						<?php $pagename = query_posts(array('post_type'=>'page','pagename'=>'aside2','posts_per_page'=>1));?>
+ 						<?php if(!empty($pagename)) {?>
+     					<?php while(have_posts()){ the_post();?>
+								<h2 class="titulo-aside"><?php the_title()?></h2>
+								<div class="parrafo-aside">
+									<p>
+										<?php echo max_charlength(get_the_content(),650);?>
+									</p>
+								</div>
+				</aside>
+				<!--CORREO -->
+				<aside>
+					<span class="glyphicon glyphicon-envelope ico-correo"></span>
+					<?php if(get_field('correo-aside')){?>
+					<div class="correo-aside">
+						<p>
+							<?php the_field('correo-aside');?>
+						</p>
+					</div>
+					<?php } ?>
+				</aside>
+				<!--/CORREO -->
+				<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+				<aside class="aside02">
+					 <img src="<?php echo $feat_image;?>" class="img-responsive logo" alt="<?php the_title(); ?>">
+				</aside>
+					<?php } ?>
+					<?php } ?>
+				<aside class="aside3">
+						<?php $pagename = query_posts(array('post_type'=>'page','pagename'=>'aside3','posts_per_page'=>1));?>
+ 						<?php if(!empty($pagename)) {?>
+     					<?php while(have_posts()){ the_post();?>
+								<h2 class="titulo-aside"><?php the_title()?></h2>
+								<div class="parrafo-aside">
+									<p>
+										<?php echo max_charlength(get_the_content(),650);?>
+									</p>
+								</div>
+				</aside>
+				<aside>
+					<?php if(get_field('ultimo-texto')){?>
+					<div class="ultimo-texto">
+						<p>
+							<?php the_field('ultimo-texto');?>
+						</p>
+					</div>
+					<?php } ?>
+				</aside>
+				<?php } ?>
+					<?php } ?>
+			</div>
+		</div>
+	</div>
+		
+<!--//CUADROS DE IMAGENES Y TEXTO -->
+	
+</div>
+<?php get_footer();?>

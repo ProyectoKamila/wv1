@@ -63,7 +63,7 @@
 								<ul class="nav nav-pills">
 								  <li role="presentation" class=""><a href="<?php echo home_url('');?>">INICIO</a></li>
 								  <li role="presentation"><a href="<?php echo home_url('nosotros');?>">NOSOTROS</a></li>
-								  <li role="presentation"><a href="#">JUEGOS</a></li>
+								  <li role="presentation"><a href="<?php echo home_url('juego');?>">JUEGOS</a></li>
 								</ul>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-6 col-sm-offset-3 col-xs-8 col-md-offset-0 col-xs-6 col-xs-offset-3">

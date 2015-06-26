@@ -27,6 +27,9 @@ $(function() {
         $('#slider1').anythingSlider({
 //			theme : 'metallic',
 			expand       : true,
+			enableStartStop     : false,
+			 enableArrows        : false,  
+			  buildArrows         : false, 
 			autoPlay     : true
 		});
 });

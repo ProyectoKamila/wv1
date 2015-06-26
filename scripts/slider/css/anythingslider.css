@@ -28,7 +28,7 @@
 .anythingSlider-default {
 	margin: 0 auto;
 	/* 45px right & left padding for the arrows, 28px @ bottom for navigation */
-	padding: 0 45px 28px 45px;
+	/*padding: 0 45px 28px 45px;*/
 }
 /* slider window - top & bottom borders, default state */
 .anythingSlider-default .anythingWindow {
@@ -38,15 +38,17 @@
 /* Navigation buttons + start/stop button, default state */
 .anythingSlider-default .anythingControls a {
 	/* top shadow */
-	background: #777 url(../images/default.png) center -288px repeat-x;
+	
 	color: #000;
 	border-radius: 0 0 5px 5px;
 	-moz-border-radius: 0 0 5px 5px;
 	-webkit-border-radius: 0 0 5px 5px;
+
 }
 /* Make sure navigation text is visible */
 .anythingSlider-default .anythingControls a span {
 	visibility: visible;
+	display: none;
 }
 /* Navigation current button, default state */
 .anythingSlider-default .anythingControls a.cur {
@@ -80,18 +82,29 @@
 */
 /* slider window - top & bottom borders, active state */
 .anythingSlider-default.activeSlider .anythingWindow {
-	border-color: #7C9127;
+	border-color: transparent;
 }
 /* Navigation buttons, active state */
 .anythingSlider-default.activeSlider .anythingControls a {
 	/* background image = top shadow */
-	background-color: #7C9127;
+	background-color: white;
+ 	width: 15px;
+  	height: 15px;
+  	font-size: 8px;
+  	padding: 0px !important;
+  	box-shadow: none !important;
 }
 /* Navigation current & hovered button, active state */
 .anythingSlider-default.activeSlider .anythingControls a.cur,
 .anythingSlider-default.activeSlider .anythingControls a:hover {
 	/* background image removed */
-	background: #7C9127;
+
+	background: #E83C3C;
+  	border-radius: 50%;
+  	border-color: #f4e080;
+  	width: 15px;
+  	height: 15px;
+  	border-style: solid;
 }
 
 /* start-stop button, stopped, active state */
@@ -142,18 +155,25 @@
 .anythingSlider-default .forward a.hover { background-position: right -140px; }
 
 /* Navigation Links */
-.anythingSlider-default .anythingControls { outline: 0; display: none; }
+.anythingSlider-default .anythingControls { outline: 0; display: none; margin-top: -145px; margin-left: 100px;}
 .anythingSlider-default .anythingControls ul { margin: 0; padding: 0; float: left; }
-.anythingSlider-default .anythingControls ul li { display: inline; }
+.anythingSlider-default .anythingControls ul li { 
+ display: block !important;
+  	height: 15px;
+  width: 15px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  border-radius: 50%;
+}
 .anythingSlider-default .anythingControls ul a {
 	font: 11px/18px Georgia, Serif;
-	display: inline-block;
-	text-decoration: none;
-	padding: 2px 8px;
-	height: 18px;
-	margin: 0 5px 0 0;
-	text-align: center;
-	outline: 0;
+  display: inline-block;
+  padding: 11px 10px;
+  height: 22px;
+  border-radius: 11px;
+  margin: 0 5px 0 0;
+  text-align: center;
+  outline: 0;
 }
 
 /* navigationSize window */
@@ -164,10 +184,7 @@
 
 /* Autoplay Start/Stop button */
 .anythingSlider-default .anythingControls .start-stop {
-	padding: 2px 5px;
-	width: 40px;
-	text-align: center;
-	text-decoration: none;
+	
 	float: right;
 	z-index: 100;
 	outline: 0;
