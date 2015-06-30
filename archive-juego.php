@@ -18,16 +18,14 @@
 					<div class="cuadro1">
 				
 						<div class="col-lg-6 col-md-6 col-sm-6">
-							
-							<img src="<?php bloginfo("template_url") ?>/images/recortes/juegos/slot-machine.jpg" class="img-responsive juegos-imagenes" alt="" >
+							<?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+							<img src="<?php echo $feat_image;?>" class="img-responsive juegos-imagenes" alt="" >
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-6">
-								<h2>SLOT MACHINE</h2>
+								<h2><?php the_title(); ?></h2>
 							<div class="parrafo-machine">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra porta magna ut mattis. In ac lacinia mauris. Curabitur eget augue risus. Aliquam erat volutpat. In ultrices varius lorem, ut sagittis odio pretium eget. Integer venenatis, arcu sit amet porta fringilla, tellus nunc posuere velit, vel volutpat ante lacus ut lectus.
-								</p>
-								<a href="" class="btn btn-default boton-ver">
+								<p><?php echo max_charlength(get_the_content(),250);?></p>
+								<a href="<?php the_field('enlace_demo');?>" class="btn btn-default boton-ver">
 									<span class="texto-jugar">JUGAR AHORA</span>
 									<span class="glyphicon glyphicon-play-circle ico-play"></span>
 								</a>

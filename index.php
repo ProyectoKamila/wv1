@@ -112,13 +112,7 @@
 		<div class="col-xs-12">
 
 			<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-				<div class="section-bottom">
-					<?php $Servicio = query_posts(array('post_type'=>'page','pagename'=>'inicio','posts_per_page'=>1)); ?>
-									<?php while(have_posts()){ the_post();?>
-									<h2><?php the_field('titulo_4')?></h2>
-									<p><?php the_field('texto_4')?> </p>
-									<?php }?>
-				</div>				
+					
 			</div>
 			<div class="clearfix"></div>
 

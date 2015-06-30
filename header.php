@@ -96,7 +96,7 @@
 										<a href="">
 											<img src="<?php bloginfo('template_url');?>/images/recortes/home/google.png" alt="">
 										</a>
-										<a href="">
+										<a href="" class="hidden-sm hidden-md">
 											<img src="<?php bloginfo('template_url');?>/images/recortes/home/pinterest.png" alt="">
 										</a>
 									</div>

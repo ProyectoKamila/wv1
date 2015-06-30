@@ -3,7 +3,7 @@
 <section class="list-game">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-10 col-lg-offset-1">
+                    <div class="col-lg-10 col-lg-offset-1" style="margin-top: -216px;">
 				<div class="list">
 					<div class="container-fluid">
 						<div class="row">
@@ -40,7 +40,9 @@
 										</div>
 									</div>
 								</div>
-							<?php } ?>
+							<?php 
+$x++; 
+						} ?>
 						</div>
 					</div>
 				</div>

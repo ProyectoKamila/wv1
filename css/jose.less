@@ -170,7 +170,7 @@ color: white;
 	display: block;
 	clear: both;
 	height: 600px;
-	margin-top: -20px;
+	margin-top: -120px !important;
 	ul{
 		padding: 0px;
 		margin: 0px;
@@ -190,7 +190,9 @@ color: white;
 }
 .list-game{
 	margin-bottom: 20px;
-	margin-top: -216px;
+	
+        
+        position: relative;
 	.list{
 		width: 100%;
 		background: @gris-plomo;
@@ -313,6 +315,7 @@ color: white;
 			p{
 				text-align: justify;
 				line-height: 1.5;
+                                font-size: 16px;
 			}
 		}
 		.logo-mesa{
@@ -484,11 +487,11 @@ footer{
 	.telefono{
 		color: white;
 		padding-top: 15px;
-		font-size: 20px;
+		font-size: 16px;
 	}
 	.email{
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 18px;
+		padding-right: 18px;
 	}
 }
 .menu-botones{
@@ -537,8 +540,9 @@ footer{
 		margin-bottom: 10px;
 	}
 	.mesa-baja{
-		b
-		ackground-size: cover !important;
+		background: @verde-oscuro;
+		-webkit-animation: none ; 
+    	animation: none ;
 	}	
 	.acceder{
 
@@ -561,7 +565,9 @@ footer{
 		.logo-mesa{
 			margin-top: 0px;
 		}
+
 	}
+
 
 }
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
@@ -576,6 +582,9 @@ footer{
 			}
 		}
 	}
+	.mesa-baja{
+			height: 400px;
+		}
 
 }
 @media (min-width: @screen-lg-min) and (max-width: 1200px){ 
@@ -589,17 +598,24 @@ footer{
 			}
 		}
 	}
+
+ }
+ @media (min-width: @screen-lg-min){
+.mesa-baja{
+			height: 400px;
+			background-size: contain;
+		}
  }
  /* Chrome, Safari, Opera */ 
 @-webkit-keyframes mesa {
     0%   {
 		    background: url(../images/recortes/home/mesa2.png) 100% 120% no-repeat;
-			background-size: cover;
+			background-size: contain;
 			padding-bottom: 50px;
     }
    	80%   {
    			background: url(../images/recortes/home/mesa3.png) 100% 120% no-repeat;
-   			background-size: cover;
+   			background-size: contain;
 			padding-bottom: 50px;
    			}
     
@@ -609,12 +625,19 @@ footer{
 @keyframes mesa {
         0%   {
 		    background: url(../images/recortes/home/mesa2.png)  bottom  center no-repeat;
-			background-size: cover;
+			background-size: contain;
 			padding-bottom: 50px;
     }
    	80%   {
    			background: url(../images/recortes/home/mesa3.png)  bottom  center no-repeat;
-   			background-size: cover;
+   			background-size: contain;
 			padding-bottom: 50px;
    			}
+}
+.logo-footer{
+	position: relative;
+	margin: 0 auto;
+	  display: block;
+  width: 100px;
+  margin-top: 5px;
 }
