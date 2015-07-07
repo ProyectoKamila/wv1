@@ -20,9 +20,9 @@
             <div class="container">
                 <div class="row caja-nosotros">
                     <div class="col-lg-3 col-md-3">
-                        <?php $feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+
                         <div class="nosotros-imagen1">
-                            <img src="<?php echo $feat_image; ?>" class="img-responsive " alt="">
+                            <img src="<?php the_field('imagen_left'); ?>" class="img-responsive " alt="<?php the_title(); ?>">
                         </div>
                     </div>
                     <div class="col-lg-8   col-md-7">
@@ -48,20 +48,19 @@
                                 </p>
                             </div>
                         <?php } ?>
-                        <div class="col-lg-5">
-                            <img src="<?php bloginfo("template_url") ?>/images/recortes/nosotros/2.jpg" class="img-responsive " alt="">
+                        <div class="col-lg-5">  
+                            <img src="<?php the_field('imagen_right'); ?>" class="img-responsive " alt="<?php the_title(); ?>">
                         </div>
-
-
                     </div>
                     <div class="clearfix"></div>
                     <!--imagen fondo -->
 
                     <?php if (get_field('fondo_publicidad')) { ?>
-                        <div class="imagen-publi col-lg-12  col-md-12">
-                            <img src="<?php the_field('fondo_publicidad'); ?>" class="img-responsive " alt="">
-                        </div>
-
+                        <a href="">
+                            <div class="imagen-publi col-lg-12  col-md-12">
+                                <img src="<?php the_field('fondo_publicidad'); ?>" class="img-responsive " alt="">
+                            </div>
+                        </a>
                     <?php } ?>
                     <div class="clearfix"></div>
                     <!--TITULO2 Y PARRAFO -->

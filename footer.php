@@ -30,11 +30,11 @@
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                     <ul class="nav nav-pills">
-                        <li role="presentation"><a href="#">Inicio</a></li>
-                        <li role="presentation"><a href="#">Nosotros</a></li>
-                        <li role="presentation"><a href="#">Juegos</a></li>
-                        <li role="presentation"><a href="#">Póker</a></li>
-                        <li role="presentation"><a href="#">Blog</a></li>
+                        <li role="presentation"><a href="<?php echo home_url(''); ?>">Inicio</a></li>
+                        <li role="presentation"><a href="<?php echo home_url('nosotros'); ?>">Nosotros</a></li>
+                        <li role="presentation"><a href="<?php echo home_url('juego'); ?>">Juegos</a></li>
+                        <li role="presentation"><a href="<?php echo home_url('casino/poker'); ?>">Póker</a></li>
+                        <li role="presentation"><a href="<?php echo home_url('blog'); ?>">Blog</a></li>
                     </ul>
                     <div class="clearfix"></div>
                     <p class="telefono hidden-xs"><span class="glyphicon glyphicon-earphone "></span> 900 234 80 32 <span class="glyphicon glyphicon-envelope email"></span> soporte@casino4as.com</p>
@@ -89,7 +89,7 @@
             enableStartStop: false,
             enableArrows: false,
             buildArrows: false,
-            hashTags:false,
+            hashTags: false,
             autoPlay: true
         });
     });
