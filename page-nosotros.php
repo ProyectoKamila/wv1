@@ -56,11 +56,11 @@
                     <!--imagen fondo -->
 
                     <?php if (get_field('fondo_publicidad')) { ?>
-                        <a href="">
+                        <a href="<?php the_field('enlace_publicidad'); ?>">
                             <div class="imagen-publi col-lg-12  col-md-12">
                                 <img src="<?php the_field('fondo_publicidad'); ?>" class="img-responsive " alt="">
                             </div>
-                        </a>
+                        </a>    
                     <?php } ?>
                     <div class="clearfix"></div>
                     <!--TITULO2 Y PARRAFO -->
@@ -152,6 +152,7 @@
                                     </p>
                                 <?php } ?>
                             </div>
+
                             <!-- BOTON-->
                             <div class="clearfix"></div>
                             <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 boton-n " >
@@ -160,6 +161,8 @@
                                 </a>
                             </div>
                         </div>
+                        <br/>
+
                     </div>
                     <!-- /cierrra while -->
                 <?php } ?>
@@ -167,5 +170,6 @@
         </div>
     </div>
 </div>
+<div style="margin-bottom: 30px;"></div>
 <?php get_footer(); ?>
 
