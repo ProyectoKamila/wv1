@@ -21,19 +21,25 @@
                     the_post();
                     ?>
                     <div class="cuadro1">
-
+                    <div class="col-xs-12">    <h2><?php the_title(); ?></h2> </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
     <?php $feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
                             <img src="<?php echo $feat_image; ?>" class="img-responsive juegos-imagenes" alt="" >
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
-                            <h2><?php the_title(); ?></h2>
+                        
                             <div class="parrafo-machine">
-                                <p><?php echo max_charlength(get_the_content(), 240); ?> <a href="<?php the_permalink();?>">Leer mas</a> </p>
-                                <a href="<?php the_field('enlace_demo'); ?>" class="btn btn-default boton-ver">
+                                <p><?php the_field('descripcion_corta'); ?></p>
+                                            <a href="<?php the_field('enlace_demo'); ?>" class="btn btn-default boton-ver">
                                     <span class="texto-jugar">JUGAR AHORA</span>
                                     <span class="glyphicon glyphicon-play-circle ico-play"></span>
                                 </a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="parrafo-machine">
+                            <?php the_content();?>
                             </div>
                         </div>
                     </div>

@@ -45,6 +45,13 @@ function theme_custom_types() {
         'hierarchical' => true
     ));
     add_custom_taxonomy(array(
+        'name' => 'juegos',
+        'singular' => 'tipo',
+        'genero' => 'f',
+        'post_type' => 'juego',
+        'hierarchical' => true
+    ));
+    add_custom_taxonomy(array(
         'name' => 'tipo',
         'singular' => 'tipo',
         'genero' => 'f',

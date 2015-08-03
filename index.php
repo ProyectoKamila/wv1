@@ -68,7 +68,7 @@
                     <div class="carta"></div>
                     <div class="carta-real pica">
                         <div class="icon">
-                <?php the_field('icono'); ?>
+                <img src="<?php the_field('icono'); ?>">
                         </div>
                 <?php the_content(); ?>
                     </div>
@@ -82,7 +82,7 @@
                     <div class="carta"></div>
                     <div class="carta-real diamante">
                         <div class="icon">
-                <?php the_field('icono'); ?>
+                <img src="<?php the_field('icono'); ?>">
                         </div>
                 <?php the_content(); ?>
                     </div>
@@ -96,7 +96,7 @@
                     <div class="carta"></div>
                     <div class="carta-real trebol">
                         <div class="icon">
-                <?php the_field('icono'); ?>
+                <img src="<?php the_field('icono'); ?>">
                         </div>
                 <?php the_content(); ?>
                     </div>
@@ -110,7 +110,7 @@
                     <div class="carta"></div>
                     <div class="carta-real corazon">
                         <div class="icon">
-    <?php the_field('icono'); ?>
+    <img src="<?php the_field('icono'); ?>">
                         </div>
     <?php the_content(); ?>
                     </div>
@@ -127,7 +127,7 @@
 
                 <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                     <div class="section-bottom">
-                        <p class="center btn btn-default" onclick="activate();"><span class="glyphicon glyphicon-user"></span> <span>120</span> Usuarios En Linea </p>
+    git                     <!--<p class="center btn btn-default" onclick="activate();"><span class="glyphicon glyphicon-user"></span> <span>120</span> Usuarios En Linea </p>-->
                     </div>				
                 </div>
                 <div class="clearfix"></div>

@@ -35,6 +35,7 @@
                                     <span class="glyphicon glyphicon-play-circle ico-play"></span>
                                 </a>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="paleta">
