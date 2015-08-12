@@ -1,15 +1,12 @@
 <?php get_header(''); ?>
 <?php portada('juego'); ?>
 <?php get_template_part('list-game'); ?>
-
 <div class="content">
     <div class="container fondo-mesa">
         <div class="row">
             <div class="col-lg-12 text-center juego-texto1">
                 <h1>JUEGOS DEL CASINO</h1>
-
             </div>
-
         </div>
     </div>
     <!--CUADROS DE IMAGENES Y TEXTO -->
@@ -23,7 +20,7 @@
                     <div class="cuadro1">
 
                         <div class="col-lg-6 col-md-6 col-sm-12">
-    <?php $feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+                            <?php $feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
                             <img src="<?php echo $feat_image; ?>" class="img-responsive juegos-imagenes" alt="" >
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
